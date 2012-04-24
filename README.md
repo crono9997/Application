@@ -1,4 +1,4 @@
-Application
-===========
+Code-Foo Application
+====================
 
 Complete Application
