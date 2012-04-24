@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Code Foo Application</title>                  
+
+<meta charset="utf-8">
+<meta name="description" content="Application for IGN Code-Foo">
+<meta name="author" content="Jeremy Weeks">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+
+<link rel="stylesheet" media="screen, projection" href="screen.css">
+<link href='http://fonts.googleapis.com/css?family=Oswald:400,700' rel='stylesheet' type='text/css'>
+<!-- Enable HTML5 elements in IE7+8 -->
+<!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<script src="licensePlate.js"></script>
+</head>
+
+<body class="home blog">
+	<div id="wrap">
+		<header class="navHeader">
+			<div id="logo">
+				<a href="#"></a>
+			</div>	
+			<nav>
+				<ul class="group">
+					<li><a href="#bus"><strong>Buses<em>how many</em></strong></a></li>
+					<li><a href="#liquid"><strong>Liquid<em>layout</em></strong></a></li>
+					<li><a href="#plate"><strong>Plates<em>efficient</em></strong></a></li>
+					<li><a href="#about"><strong>About<em>me</em></strong></a></li>
+					<li><a href="#connect"><strong>Connect<em>4 or more</em></strong></a></li>
+				</ul>
+			</nav>
+		</header> 
+		<hr>		
+		<div id="main">	
+			<div class="cols"> 
+				<article id="bus">
+					<header>
+						<h1><a>Lots of balls</a></h1>	
+					</header>				
+					<aside>How many ping-pong balls would fit in an average shool bus?</aside>				
+					<p>	To find the number of whole ping-pong balls that would fit into an average school bus, we first need to find the volume of both an average school bus and a ping pong ball.</p>
+					<p class="figure-full"><img src="images/bus.png" /></p>
+					<p>A standard ping-pong ball has a radius of 2cm. To find its actual volume we would use the formula for volume of a sphere - v = 4/3*pi*r^3</p>
+					<ul><li>Actual volume of a ping-pong ball = 4/3*pi*(2*2*2) = 33.5103216 cubic cm</li></ul>
+					<p>Unfortunatly if we were to use this value to find the number of ping-pong balls that could fit into a school bus, we would not be accounting for the empty space surrounding a sphere when stacked with other spheres. To get a more accurate count we can treat the ping-pong ball as a cube and say that we are stacking the ping-pong balls directly on top of each other.</p>
+					<p>To find its cubed volume we multiply its length by its width by its height. Due to the ping-pong ball being sphereical each of these dimension are equal to its diameter.</p>
+					<ul><li>Volume of the ball = 4cm*4cm*4cm = 64 cubic cm.</li></ul>
+					<p>An average school bus is 37' long, 8' wide and 10' tall.</p>
+					<ul><li>Volume of a school bus = 37' x 8' x 10' = 2960 cubic feet.</li></ul>
+					<p>To use these measurments we must first convert cubic feet to cubic cm.</p>
+					<ul><li>2960 cubic feet = 83,817,865.9 cubic cm</li></ul>
+					<p>Last, we divide the volume of the school bus by the volume of the ping-pong ball.</p>
+					<ul><li>83,817,865.9 / 64 rounded down = <b>1,309,654</b> ping pong balls</li></ul>
+					<p>This number assumes that the ping-pong balls are stacked directly on top of each other rather than staggered. Staggering the ping-pong balls would increase the count. Also, this ignores the fact that we want the pingpong balls to stay whole and not be cut into smaller pieces to fit within the dimensions. To fix this lets see how many complete balls can fit in each dimension. </p>
+					<p>Bus length = 37' = 1127.76 cm <br />
+					# of balls = 1127.76/4 rounded down = <b>281 balls</b></p>
+					<p>Bus width = 8' = 243.84 cm <br />
+					# of balls = 243.84/4 rounded down = <b>60 balls</b></p>
+					<p>Bus height = 10' = 304.8 cm <br />
+					# of balls = 304.8/4 rounded down = <b>76 balls</b></p>
+					<p>Total balls = 281 x 60 x 76 = <b>1,281,360</b> complete ping-pong balls stacked on top of each other.</p>
+					<p>This number assumes the bus is completely empty. So no chairs, equipment or children. This number could be increased further using a dense packing arrangment.</p>
+					<p>The Kepler conjecture, named after Johannes Kepler, is a mathematical conjecture about sphere packing stating that no arrangement of equally sized spheres filling space has a greater average density than 74.048%. Using this information we can take the volume of our school bus and multiply it by our packing density, then divide it by the volume of our ping-pong ball.</p>
+					<p>(83,817,865.9 cubic cm * 0.74048)/33.5103216 cubic cm =</p>
+					<h2><b>1,852,129 ping-pong balls</b></h2>
+				</article>			
+				<article id="liquid">
+					<header>
+						<h1><a>Liquid Layout</a></h1>	
+					</header>				
+					<aside>Why you would use a liquid layout.</aside>				
+					<p>This page was designed with a liquid layout. The layout supports any resolution from 480x320 to 1680x1050 using percentages for div sizes as opposed to fixed dimensions. A liquid layout is practically neccessary in this modern age of mobile devices. Not only do web developers have to account for various monitor sizes, but now a substantial number of visitors are using smart phones with resolutions as low as 480x320.</p>				
+					<p>Anyone who has used a smart phone to surf the web understands the frustration of viewing a site designed for resolutions much larger. The goal of a liquid layout is to balance asthetics and content so the smart phone user can easily consume the information they desire, as well as please the desktop user with a uncluttered appealing design.</p>
+				</article>		
+			</div>
+			<div class="cols"> 	
+				<article id="plate">
+					<header>
+						<h1><a>Owning a License Plate Factory</a></h1>	
+					</header>				
+					<aside>The simplest pattern that will produce enough unique plates.</aside>				
+					<p>This is a program written in Javascript to find the the simplest pattern that will produce enough unique license plates, for a given population, with the least excess. It uses letters (A-Z) and numbers (0-9).</p>
+					<p>Enter a population and click submit to see the results.</p>				
+					<div align="right">
+						<p>Population: <input type="text" id="populationField" /><!-- <br /> -->
+						<input type="button" value="Submit" onclick="findLicensePlates()"><br />
+						<a href="licensePlate.js">View the code.</a></p>
+					</div>
+				</article>			
+				<article id="about">
+					<header>
+						<h1><a>Who am I?</a></h1>	
+					</header>				
+					<aside>Jeremy Weeks.</aside>
+					<p>Hello, my name is Jeremy Weeks. Coding has been my passion for almost 13 years, matched only by gaming. I am self taught and am familiar with various languages including C#, Actionscript 3, PHP, Javascript, jQuery, HTML and CSS. I visit ign.com everyday and listen to Game Scoop, Podcast Beyond, and Podcast Unlocked every week. I have been an IGN Prime member since May 2011. Here is a video explaining why I think I would be a perfect fit for IGN's Code Foo.</p>
+					<iframe width="560" height="315" src="http://www.youtube.com/embed/XFtUcBFp95o" frameborder="0" allowfullscreen></iframe>
+					<p>The following is a video of my game Shape Shooter, created for Microsoft's Dream Build Play Challenge 2010 competition. It was developed in C# using the XNA framework. It was a finalist in the competition.</p>
+					<iframe width="560" height="315" src="http://www.youtube.com/embed/B45ZQFZhDAU" frameborder="0" allowfullscreen></iframe>
+					<p>I designed and developed Shape Shooter by myself. All coding was written in C# using object oriented programming. I also developed tools in Adobe Flash to support the development, including a level editor and animation tool that would take vector based animation and convert it to sprite sheets for 2D texture assets. I also have an app in the IOS app store called SymmetraSketch. I currently make a living designing software and think it's time to take my code to the next level. I promise to impress you, if you give me a chance.</p>
+				</article>			
+				<article id="connect">
+					<header>
+						<h1><a>Making Connections</a></h1>	
+					</header>				
+					<aside>A simple game of patterns.</aside>				
+					<p>Create a game of Connect 4™ with one AI-controlled opponent and a human-controlled player. The following game was created for Code-Foo using Actionscript 3 and Flash Professional. The game features an intelligent AI opponent that poses a significant challenge to your average Connect 4™ player.</p>
+					<p>The game also features animated tiles with personalities. The animation is entirely code based and the characters can react to nearby tiles in real time. A settings menu allows the rows and columns of the game board to be altered, as well as the tile colors. The dimensions of the game also scale with the page size to support the liquid layout design. All code can be found in the repository.</p>
+					<div class="flash" name="flash" id="flashContent">
+					<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="664" height="664" id="fourinrow" align="middle">
+						<param name="movie" value="connect4/fourinrow.swf" />
+						<param name="quality" value="high" />
+						<param name="bgcolor" value="#ffffff" />
+						<param name="play" value="true" />
+						<param name="loop" value="true" />
+						<param name="wmode" value="opaque" />
+						<param name="scale" value="showall" />
+						<param name="menu" value="true" />
+						<param name="devicefont" value="false" />
+						<param name="salign" value="" />
+						<param name="allowScriptAccess" value="sameDomain" />
+						<!--[if !IE]>-->
+						<object type="application/x-shockwave-flash" data="connect4/fourinrow.swf" width="664" height="664">
+							<param name="movie" value="connect4/fourinrow.swf" />
+							<param name="quality" value="high" />
+							<param name="bgcolor" value="#ffffff" />
+							<param name="play" value="true" />
+							<param name="loop" value="true" />
+							<param name="wmode" value="opaque" />
+							<param name="scale" value="showall" />
+							<param name="menu" value="true" />
+							<param name="devicefont" value="false" />
+							<param name="salign" value="" />
+							<param name="allowScriptAccess" value="sameDomain" />
+						<!--<![endif]-->
+							<a href="http://www.adobe.com/go/getflash">
+								<img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player" />
+							</a>
+						<!--[if !IE]>-->
+						</object>
+						<!--<![endif]-->
+					</object>
+					</div>
+				</article>
+			</div> 	
+		</div>
+	</div>
+	<div id="footerDiv">
+		<footer>
+			<img class="right" src="images/ignBookEndRight.png" />
+			<h3>Created for IGN Code-Foo</h3>
+			<p>Copyright © 2012 Jeremy Weeks. BEYOND!</p>
+		</footer>
+	</div>
+</body>
+</html>

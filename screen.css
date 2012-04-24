@@ -1,0 +1,438 @@
+/* Author: 	Jeremy Weeks */
+	
+/* Style Reset
+------------------------------------- */
+	
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	}
+ol, ul {
+	list-style: none;
+	}
+	
+/* Main Styles
+------------------------------------- */
+
+body {
+	padding: 25px 0;
+	color: #222222;
+	font-family: Georgia, Times, "Times New Roman", serif;
+	font-size: 70%;
+	background: url(images/ign_600.png) no-repeat fixed;
+	}
+
+/* links */
+
+a:link, a:visited {
+	text-decoration: none;
+	outline: none;
+	color: #900000;
+	}
+a:hover {
+	color: #CC0000;
+	}
+strong {
+	font-weight: bold;
+	}
+	
+/* Structure 
+------------------------------------- */
+
+#footerDiv {
+	font-size: 1.3em;
+	margin: 0 0 30px -20%;
+	padding: 20px 20px 20px 20px;
+	background: #222222; 
+	}
+#wrap {
+	margin: 0 auto;
+	padding: 0 20px;
+	font-size: 1.3em;
+	}
+footer {
+	max-width: 900px;
+	margin: 0 auto 10px auto;
+	font-size: 1.2em;
+	}
+	
+/* Header 
+------------------------------------- */
+
+header.navHeader {
+	margin: 0 0 25px 0;
+	padding: 10px 0 25px 0;
+	border-bottom: 2px solid rgba(34, 34, 34, 0.2);
+	}
+	
+/* Logo */
+
+#logo {
+	float: left;
+	width: 20%;
+	height: 64px;
+	}
+#logo a {
+	display: block;
+	width: 95px;
+	height: 64px;
+	background: url(images/logo1.png) no-repeat top left;
+	}
+#logo img {
+	display: block;
+	height: 0;
+	}
+	
+nav ul li {
+	float: left;
+	width: 15%;
+	margin: 14px 0 0 0;
+	}
+nav ul li a {
+	display: block;
+	float: left;
+	width: 100%;
+	font-size: 1em;
+	margin: 0 0 0 22px;
+	
+	line-height: 1.3em;
+	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	}
+nav ul li a strong {
+	display: block;
+	padding: 0;
+	font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+	font-weight: 700;
+	color: rgba(34, 34, 34, 0.5);
+	-webkit-transition: color 0.2s ease-in-out;
+	   -moz-transition: color 0.2s ease-in-out;
+	     -o-transition: color 0.2s ease-in-out;
+	        transition: color 0.2s ease-in-out;
+	}
+nav ul li a em {
+	display: block;
+	font-size: .95em;
+	font-weight: normal;
+	font-style: normal;
+	text-transform: none;
+	letter-spacing: 0;
+	color: rgba(34, 34, 34, 0.35);
+	-webkit-transition: color 0.2s ease-in-out;
+	   -moz-transition: color 0.2s ease-in-out;
+	     -o-transition: color 0.2s ease-in-out;
+	        transition: color 0.2s ease-in-out;
+	}	
+nav ul li:hover{
+	background: url(images/ignSmall.png) no-repeat;
+	background-position:  0 8px;  
+	}	
+nav ul li a:hover strong {
+	color: #222222;
+	}
+nav ul li a:hover em {
+	color: rgba(34, 34, 34, 0.7);
+	}
+	
+/* Main
+------------------------------------- */
+	
+#main {
+	font-size: 1em;
+	line-height: 1.6;
+	}
+#main a {
+	text-decoration: underline;
+	}
+	
+/* Headings */
+#main h1 {
+	margin: 0 0 .5em 0;
+	font-family: "Oswald", Calibri, Segoe, sans-serif;
+	font-size: 2.6em;
+	font-weight: 500;
+	line-height: 1;
+	letter-spacing: 0px;
+	text-transform: uppercase;
+	}
+#main h1 a {	
+	color: rgba(34, 34, 34, 0.8);
+	text-decoration: none;
+	}
+#main h1 a:hover {	
+	color: #900000;
+	}
+#main h2 {
+	margin: 0 0 .5em 0;
+	font-family: "Oswald", Calibri, Segoe, sans-serif;
+	font-size: 1.8em;
+	font-weight: 500;
+	line-height: 1;
+	text-align: center;
+	color: rgba(34, 34, 34, 0.8);
+	letter-spacing: 0px;
+	text-transform: uppercase;
+	}
+
+/* Articles */
+#main article {
+	max-width: 550px;
+	margin: 0 0 2.8em 0;
+	padding: 0 50px 50px 150px; 
+	border-bottom: 1px solid rgba(34, 34, 34, 0.4);
+	}	
+#main article:last-of-type {
+	padding-bottom: 0;
+	}
+article aside {
+	float: left;
+	width: 15%;
+	margin: 0 0 0 -20%;
+	font-size: .85em;
+	line-height: 2;
+	color: rgba(34, 34, 34, 0.7);
+	font-weight: normal;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	}
+
+	
+article p,
+article ul,
+article ol {
+	margin: 0 40px 1.6em 0;
+	}
+article p.figure-full img {
+	display: block;
+	margin: 2.1em 0 0 0;
+	max-width: 100%;
+	border-radius: 5px;
+	}
+#main article ul li {	
+	margin: 0 0 .4em 40px;
+	list-style: circle;
+	}
+#main article iframe {
+	width:90%;
+	float:center;
+	padding: 0 0 20px 0
+	}
+#main article object,
+#main article embed {
+	width: 100%;
+	width:550px;
+	height:550px; 
+	}
+
+/* Columns */
+	
+#main div.cols{
+	float: left;
+	border-right: 1px solid rgba(34, 34, 34, 0.3);
+	}	
+
+	
+/* Footer 
+------------------------------------- */
+
+footer img.left{
+	float: left;
+	}	
+footer img.right{
+	float: right;
+	}
+footer h3 {
+	 margin: 0px 50px 0px 50px; 
+	font-family: Georgia, Times, "Times New Roman", sans-serif;
+	font-size: 2.4em;
+	font-weight: 600;
+	text-align: right;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	color: rgba(128,128,128, 0.8);
+	}
+footer p {
+	 margin: 0 50px 0 0;
+	line-height: 1.4;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	text-align: right;
+	color: rgba(98,98,98, 0.8);
+	}
+footer p:last-child {
+	margin-bottom: 0;
+	}
+	
+/* Misc. 
+------------------------------------- */
+
+hr {
+	display: none;
+	}
+a img {
+	border: none;
+	}
+	
+.group:after,
+header.navHeader:after,
+nav:after,
+#main:after,
+article:after,
+#footerDiv:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+	}
+	
+/* Adjustments based on screen size.
+------------------------------------- */
+
+@media screen and (max-width: 1600px) {	
+	#main article{
+		max-width: 900px;
+		}	
+	#main div.cols{
+		float: none;
+		border: none;
+		}
+	article aside {
+		width: 20%;
+		margin: 0 0 0 -25%;
+		}
+	#wrap {
+		margin: 0 auto;
+		max-width: 900px; 
+		}
+	#main article object,
+	#main article embed {
+		width: 100%;
+		height: 670px;
+		max-height: 670px;
+		}	
+	}
+	
+@media screen and (max-width: 1030px) {
+	article aside {
+		width: 18%;
+		margin: 0 0 0 -23%;
+		}
+	} 
+		
+@media screen and (max-width: 800px) {
+	body {		
+		background: url(images/ign_300.png) no-repeat fixed;
+	}
+
+	nav ul li {
+		margin: 22px 0 0 0;
+		}
+		
+	nav ul li:hover{
+		background-position:  0 0;  
+	}
+		
+	nav ul li a em {
+		display: none;
+		}
+	#main article {
+		padding-left: 0;
+		}
+	#main h1 {
+		margin: 0 0 .1em 0;
+		}		
+	article aside {
+		float: none;
+		width: auto;
+		margin: 0 0 1.6em 0;
+		}	
+	article p,
+	article ul{
+		margin-right: 0;
+		}		
+	#main article object,
+	#main article embed {
+		max-height: 500px;
+		}
+	}
+	
+@media screen and (max-width: 500px) {
+	body {
+		padding-top: 10px;		
+		background-position:top center; 
+		}
+	#wrap {
+		padding: 0 10px;
+		}
+	header.navHeader {
+		padding-top: 15px;
+		}
+	#logo {
+		float: none;
+		margin: 0 auto 20px auto;
+		}
+	nav ul {
+		text-align: center;
+		}
+	nav ul li {
+		float: none;
+		display: inline;
+		width: auto;
+		margin: 0 5px;
+		font-size: 1em;
+		}
+	nav ul li:first-child {
+		margin-left: 0;
+		}
+	nav ul li a {
+		float: none;
+		display: inline;
+		width: auto;
+		}
+	nav ul li a strong {
+		display: inline;
+		}
+	#main h1 {
+		font-size: 2em;
+		line-height: 1;
+		}
+	#main article p {
+		font-size: .9em;
+		line-height: 1.6;
+		}	
+	#footerDiv {
+		 padding: 40px 20px 0 10px; 
+		font-size: 1.1em;
+		}
+	footer h3 {
+		margin-right: 40px;
+		margin-left: 40px;
+		font-size: 1.8em;
+		line-height: 1.1;
+		letter-spacing: 1px;
+		}
+	footer p {
+		margin-right: 20px;
+		margin-left: 20px;
+		}		
+	#main article object,
+	#main article embed {
+		max-height: 400px;
+		}		
+	}
